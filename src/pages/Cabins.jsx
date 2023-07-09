@@ -3,8 +3,6 @@ import Row from "../components/Row";
 import CabinTable from "../features/cabins/CabinTable";
 
 function Cabins() {
-	// Fetching Cabin data with React-Query
-
 	return (
 		<>
 			<Row type="horizontal">

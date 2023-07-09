@@ -29,12 +29,13 @@ const TableHeader = styled.header`
 `;
 
 const CabinTable = () => {
+	// Fetching cabin data using React Query hook
 	const {
 		data: cabins,
 		isLoading,
 		// error,
 	} = useQuery({
-		queryKey: ["cabin"],
+		queryKey: ["cabins"],
 		queryFn: fetchCabins,
 	});
 
