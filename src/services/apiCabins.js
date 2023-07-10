@@ -38,6 +38,7 @@ export const createEditCabin = async (cabinData, id) => {
 	const { data } = await query.select().single();
 
 	// 3.Uploading Image to Bucket
+	if (hasImagePath) return data;
 	const { error: storageError } = await supabase.storage
 		.from("cabin-images")
 		.upload(imageName, cabinData.image, {
