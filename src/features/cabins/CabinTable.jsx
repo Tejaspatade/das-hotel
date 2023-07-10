@@ -1,8 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
-import { fetchCabins } from "../../services/apiCabins";
+
 import Spinner from "../../components/Spinner";
 import CabinRow from "./CabinRow";
+import { useCabins } from "./useCabins";
 
 const Table = styled.div`
 	border: 1px solid var(--color-grey-200);
@@ -29,16 +29,10 @@ const TableHeader = styled.header`
 `;
 
 const CabinTable = () => {
-	// Fetching cabin data using React Query hook
-	const {
-		data: cabins,
-		isLoading,
-		// error,
-	} = useQuery({
-		queryKey: ["cabins"],
-		queryFn: fetchCabins,
-	});
+	// Custom Hook(Fetch Cabins w/ React Query)
+	const { isLoading, cabins } = useCabins();
 
+	// Conditional Rendering
 	if (isLoading) return <Spinner />;
 
 	return (
