@@ -5,6 +5,7 @@ import Menus from "../../components/Menus";
 
 import { useCabins } from "./useCabins";
 import { useSearchParams } from "react-router-dom";
+import Empty from "../../components/Empty";
 
 const CabinTable = () => {
 	// Router-DOM Hook
@@ -17,6 +18,8 @@ const CabinTable = () => {
 
 	// Conditional Rendering
 	if (isLoading) return <Spinner />;
+
+	if (!cabins.length) return <Empty />;
 
 	if (filterValue === "all") filteredCabins = cabins;
 	if (filterValue === "no-discount")
