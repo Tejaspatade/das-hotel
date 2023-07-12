@@ -1,6 +1,15 @@
 import { createContext, useContext } from "react";
 import styled from "styled-components";
 
+const StyledTable = styled.div`
+	border: 1px solid var(--color-grey-200);
+
+	font-size: 1.4rem;
+	background-color: var(--color-grey-0);
+	border-radius: 7px;
+	overflow: hidden;
+`;
+
 const CommonRow = styled.header`
 	display: grid;
 	grid-template-columns: ${(props) => props.columns};
@@ -55,7 +64,7 @@ const TableContext = createContext();
 const Table = ({ columns, children }) => {
 	return (
 		<TableContext.Provider value={{ columns }}>
-			{children}
+			<StyledTable>{children}</StyledTable>
 		</TableContext.Provider>
 	);
 };
