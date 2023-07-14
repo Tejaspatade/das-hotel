@@ -51,7 +51,7 @@ const CabinRow = ({ cabin }) => {
 
 	// Custom Hook
 	const { isDeleting, deleteCabin } = useDeleteCabin();
-	const { isCreating, createCabin } = useCreateCabin();
+	const { createCabin } = useCreateCabin();
 
 	// Handler Functions
 	const duplicateCabin = () => {
