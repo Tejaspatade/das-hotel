@@ -16,12 +16,13 @@ import Users from "./pages/Users";
 import Checkin from "./pages/Checkin";
 import GlobalStyles from "./styles/GlobalStyles";
 import AppLayout from "./components/AppLayout";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
-			staleTime: 60 * 1000,
-			// staleTime: 0,
+			// staleTime: 60 * 1000,
+			staleTime: 0,
 		},
 	},
 });
@@ -33,7 +34,13 @@ const App = () => {
 			<GlobalStyles />
 			<BrowserRouter>
 				<Routes>
-					<Route element={<AppLayout />}>
+					<Route
+						element={
+							<ProtectedRoute>
+								<AppLayout />
+							</ProtectedRoute>
+						}
+					>
 						<Route
 							index
 							element={<Navigate replace to="dashboard" />}
