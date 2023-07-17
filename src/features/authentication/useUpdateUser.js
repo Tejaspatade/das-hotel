@@ -10,10 +10,10 @@ export const useUpdateUser = () => {
 	// React Query Mutation of state
 	const { mutate: updateUser, isLoading: isUpdating } = useMutation({
 		mutationFn: updateCurrentUser,
-		onSuccess: () => {
+		onSuccess: ({ user }) => {
 			// Toaster Msg
 			toast.success("User account updated successfully!");
-			// queryClient.setQueryData(["user"], user);
+			queryClient.setQueryData(["user"], user);
 
 			// Invalidate Query stored currently to trigger re-fetch
 			queryClient.invalidateQueries({
