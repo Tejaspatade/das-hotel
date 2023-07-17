@@ -5,16 +5,25 @@ import Form from "../../components/Form";
 import FormRow from "../../components/FormRow";
 import Input from "../../components/Input";
 
-// Email regex: /\S+@\S+\.\S+/
+import { useSignUp } from "./useSignup";
 
 function SignupForm() {
+	// Custom Hooks
+	const { signup, isLoading } = useSignUp();
+
 	// React Hook Forms
-	const { formState, register, getValues, handleSubmit } = useForm();
+	const { formState, register, getValues, handleSubmit, reset } = useForm();
 	const { errors } = formState;
 
 	// Handler Functions
-	const onSubmit = (data) => {
-		console.log(data);
+	const onSubmit = ({ email, fullName, password }) => {
+		signup(
+			{ email, fullName, password },
+			{
+				// Resetting form inputs after mutation is settled
+				onSettled: reset,
+			}
+		);
 	};
 
 	return (
@@ -23,6 +32,7 @@ function SignupForm() {
 				<Input
 					type="text"
 					id="fullName"
+					disabled={isLoading}
 					{...register("fullName", {
 						required: "Please Fill this field",
 					})}
@@ -33,6 +43,7 @@ function SignupForm() {
 				<Input
 					type="email"
 					id="email"
+					disabled={isLoading}
 					{...register("email", {
 						required: "Please Fill this field",
 						pattern: {
@@ -50,6 +61,7 @@ function SignupForm() {
 				<Input
 					type="password"
 					id="password"
+					disabled={isLoading}
 					{...register("password", {
 						required: "Please Fill this field",
 						minLength: {
@@ -67,6 +79,7 @@ function SignupForm() {
 				<Input
 					type="password"
 					id="passwordConfirm"
+					disabled={isLoading}
 					{...register("passwordConfirm", {
 						required: "Please Fill this field",
 						validate: (value) =>
@@ -81,7 +94,7 @@ function SignupForm() {
 				<Button variation="secondary" type="reset">
 					Cancel
 				</Button>
-				<Button>Create new user</Button>
+				<Button disabled={isLoading}>Create new user</Button>
 			</FormRow>
 		</Form>
 	);
