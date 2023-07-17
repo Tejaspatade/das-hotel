@@ -10,8 +10,8 @@ import SpinnerMini from "../../components/SpinnerMini";
 
 function LoginForm() {
 	// React State
-	const [email, setEmail] = useState("tejas@gmail.com");
-	const [password, setPassword] = useState("pass1234");
+	const [email, setEmail] = useState("bikita9863@meogl.com");
+	const [password, setPassword] = useState("sussywussy");
 
 	// Custom Hook(React Query)
 	const { login, isLoading } = useAuth();
