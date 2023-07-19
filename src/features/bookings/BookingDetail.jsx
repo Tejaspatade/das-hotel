@@ -17,6 +17,7 @@ import { useBooking } from "./useBooking";
 import { useDeleteBooking } from "./useDeleteBooking";
 import Modal from "../../components/Modal";
 import ConfirmDelete from "../../components/ConfirmDelete";
+import Empty from "../../components/Empty";
 
 const HeadingGroup = styled.div`
 	display: flex;
@@ -35,6 +36,7 @@ function BookingDetail() {
 
 	// Conditional render
 	if (isLoading) return <Spinner />;
+	if (!booking) return <Empty resource="booking" />;
 
 	// Derived State
 	const { status, id: bookingId } = booking;
