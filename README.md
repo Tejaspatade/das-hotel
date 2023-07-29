@@ -44,8 +44,8 @@ The application aims to streamline hotel operations, empowering hotel staff to e
 
 ### Prerequisites
 
--   Node.js (Version X.X.X)
--   npm (Version X.X.X)
+-   Node.js (Version 18.17.0)
+-   npm (Version 7.0.0)
 
 ### Getting Started
 
