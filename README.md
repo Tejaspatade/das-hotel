@@ -1,7 +1,5 @@
 # Das Hotelier - Elegant Hotel Management App
 
-![Das Hotelier Logo](https://github.com/Tejaspatade/das-hotel/assets/70337689/7f4c040c-2d05-43dd-8034-d342ad8dc263)
-
 ## Description
 
 Das Hotelier is a modern and sophisticated Hotel Management Application built using React for the frontend, Supabase for the backend, React Router DOM v6.4 for routing, React Query for remote state management, Styled Components for CSS, and Context API for local state management.
