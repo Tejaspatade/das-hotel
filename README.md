@@ -1,5 +1,29 @@
 # Das Hotelier - Elegant Hotel Management App
 
+<style>
+  /* Center the title */
+  h1 {
+    text-align: center;
+  }
+
+  /* Center the logo */
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some spacing between the logo and the title */
+  }
+
+  /* If the logo is too large, you can limit its width to fit better */
+  img {
+    max-width: 200px; /* Adjust the value as needed */
+  }
+</style>
+
+<div align="center">
+  <img src="link_to_logo.png" alt="Das Hotelier Logo" />
+</div>
+
 ![Das Hotelier Logo](link_to_logo.png) <!-- If you have a logo, insert its link here -->
 
 ## Description
