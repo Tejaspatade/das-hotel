@@ -117,8 +117,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 If you have any questions or suggestions, please feel free to contact us:
 
--   Email: contact@dashotelier.com
--   Website: www.dashotelier.com
--   Twitter: @dashotelier
+-   Email: tjspatade@gmail.com
+-   Website: www.das-hotel.vercel.app
+-   LinkedIn: linkedin.com/tejpatade
 
 Thank you for using Das Hotelier! We hope it serves you well in efficiently managing your hotel. Happy hoteliering! 🏨
