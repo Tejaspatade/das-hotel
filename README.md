@@ -1,5 +1,6 @@
 <div align="center">
-  <h1>🏨 🚠 Das Hotel - An Elegant Hotel Management App</h1>
+  <h1>🏨 🚠 Das Hotel</h1>
+  <h4>An Elegant Hotel Management App</h4>
 </div>
 
 ## Description
