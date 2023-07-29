@@ -1,4 +1,6 @@
-# Das Hotelier - Elegant Hotel Management App
+<div align="center">
+  <h1>🏨 🚠 Das Hotel - An Elegant Hotel Management App</h1>
+</div>
 
 ## Description
 
@@ -108,10 +110,6 @@ We welcome contributions to enhance the features and usability of Das Hotelier. 
     ```
 
 5. Open a pull request on GitHub, and we will review your changes.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
